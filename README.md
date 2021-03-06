@@ -102,13 +102,15 @@ plot out in <br/>
 This will open a plot with CMOS VTC and Blue 45 degree line <br/>
 Click on the intersection of Blue line and CMOS VTC. <br/>
 Go to terminal <br/>
-![image](https://user-images.githubusercontent.com/60166794/110218296-f567eb80-7ede-11eb-9ffe-16a9f805ffc7.png)<br/>
+![image](https://user-images.githubusercontent.com/60166794/110220312-c8213a80-7eea-11eb-948a-a63287c81337.png)
+
 The intersection point is called as swithching threshold. <br/>
 
 
 Open file called "inv_tran.spice" using below command: <br/>
 leafpad inv_tran.spice <br/>
 Change PMOS width to 0.75u, Save and Close <br/>
+![image](https://user-images.githubusercontent.com/60166794/110218296-f567eb80-7ede-11eb-9ffe-16a9f805ffc7.png)<br/>
 Type below commands for transient simulations <br/>
 ngspice inv_tran.spice <br/>
 ngspice 1 -> run <br/>
