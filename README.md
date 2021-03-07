@@ -177,10 +177,92 @@ What are the 2 variables of "delay_template_5x5"? <br/>
 The delay table below line number 2943 is for which cell ? <br/>
 ![image](https://user-images.githubusercontent.com/60166794/110238338-22f87780-7f67-11eb-954b-68a6fbcde2bd.png)  <br/>
 Which delay template is used for INVX1?  <br/>
+delay_template_5x5 <br/>
+
+
+
+Go to labs <br/>
+
+Type below command <br/>
+cd <br/>
+cd vsdflow/my_picorv32 <br/>
+leafpad picorv32.sdc <br/>
+Type below lines in the file picorv32.sdc file which you have just opened above <br/>
+
+create_clock -name clk -period 2.5 -waveform {0 1.25} [get_ports clk] <br/>
+Save and close the above file <br/>
+
+Now type below command <br/>
+
+leafpad prelayout_sta.conf <br/>
+Type below lines in prelayout_sta.conf file which you have just opened above <br/>
+
+read_liberty /usr/local/share/qflow/tech/osu018/osu018_stdcells.lib <br/>
+read_verilog synthesis/picorv32.rtlnopwr.v <br/>
+link_design picorv32 <br/>
+read_sdc picorv32.sdc <br/>
+report_checks <br/>
+Save and close the above file <br/>
+
+Now type below command <br/>
+
+sta prelayout_sta.conf <br/>
+What is the SLACK value you see? <br/>
+around -0.56ns <br/>
+
+
+
+Repeat all steps in D4SK2 - MCQ11 <br/>
+
+NOTE - If you have already done that, then you will see below 'sta' terminal like below <br/>
+
+% <br/>
+Type below command <br/>
+
+report_checks -digits 4 <br/>
+What is the data arrival time? <br/>
+
+around 2.9001ns <br/>
+
+Repeat all steps in D4SK2 - MCQ12 <br/>
+
+What is data required time ? <br/>
+around 2.3389ns <br/>
 
 
 
 
+Perform all steps in D4SK2 - MCQ11 <br/>
+
+You are now at below "sta" terminal <br/>
+
+% <br/>
+Type below command in above terminal <br/>
+
+set_propagated_clock [all_clocks] <br/>
+report_checks <br/>
+What is the SLACK value after clock propagation ? <br/>
+
+around -0.68ns <br/>
+Perform all steps in D4SK4 - MCQ2 <br/>
+
+What is launch clock network delay? <br/>
+
+Hint - Scroll a little up at the beginning of report after "report_checks" command. There is line after "clock clk (rise edge)" <br/>
+
+0.58ns <br/>
+1.Perform all steps in D4SK4 - MCQ3 <br/>
+
+What is the capture clock network delay? <br/>
+
+Hint - Look in the same report for the line "clock clk (rise edge)" <br/>
+
+around 0.56ns <br/>
 
 
 
+# Day 5 - Final steps for RTL2GDS
+## Routing, DRC and interactive PNR tutorial
+
+* #### Routing and design rule check (DRC)
+* #### PNR interactive flow tutorial
