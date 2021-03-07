@@ -266,3 +266,21 @@ around 0.56ns <br/>
 
 * #### Routing and design rule check (DRC)
 * #### PNR interactive flow tutorial
+
+Type below commands
+
+cd
+cd vsdflow/my_picorv32
+qflow route picorv32
+qflow sta picorv32 ...
+qflow backanno picorv32
+leafpad log/sta.log
+What is the pre-layout frequency?
+the pre-layout frequency is
+
+then open the below file
+
+log/post_sta.log
+What is post-layout frequency?
+the post-layout to pre-layout drop in frequency is 20MHz
+the reason for post-layout to pre-layout drop in frequency is parasitics.
