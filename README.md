@@ -137,3 +137,50 @@ magic -T min2.tech fn_postlayout.mag & <br/>
 ![image](https://user-images.githubusercontent.com/60166794/110218825-c3a45400-7ee1-11eb-8081-fb28e7afddc8.png) <br/>
 
 
+# Day 4 - Pre-layout timing analysis and importance of good clock tree
+## Clock tree synthesis (CTS) and static timing analysis (STA)
+* #### Timing modelling using delay tables
+* #### Timing analysis with ideal clocks
+* #### Clock tree synthesis and signal integrity
+* #### Timing analysis with real clocks
+
+### Lab:
+Open terminal and Type below commands  <br/>
+cd <br/>
+git clone https://github.com/kunalg123/ngspice_labs <br/>
+cd ngspice_labs <br/>
+cat inv_tran.spice <br/>
+![image](https://user-images.githubusercontent.com/60166794/110237324-79fb4e00-7f61-11eb-87de-72aab1d8e32e.png) <br/>
+The input rise slew and fall slew is 10ps. <br/>
+Type below command: <br/>
+ngspice inv_tran.spice <br/>
+
+![image](https://user-images.githubusercontent.com/60166794/110237753-a87a2880-7f63-11eb-8068-98b158724155.png)
+Go to labs Modify to output load to 20fF in inv_tran.spice Run ngspice  <br/>
+![image](https://user-images.githubusercontent.com/60166794/110237871-64d3ee80-7f64-11eb-8b55-cc1e8b219dd2.png)  <br/>
+
+Go to labs Open below file using "leafpad" or "less" or "vim" - whichever you are comfortable with) <br/>
+
+/usr/local/share/qflow/tech/osu018/osu018_stdcells.lib <br/>
+Look between line numbers 21 to 24 What is the value of "slew_upper_threshold_pct_fall" ? <br/>
+
+![image](https://user-images.githubusercontent.com/60166794/110238210-51298780-7f66-11eb-8b72-e52b887326e6.png) <br/>
+Go to labs Open the below file using leafpad or vim or less - whichever you are comfortable with <br/>
+
+/usr/local/share/qflow/tech/osu018/osu018_stdcells.lib <br/>
+Look for lines between 25 to 28 <br/>
+
+What is the value of output_threshold_pct_rise ? <br/>
+![image](https://user-images.githubusercontent.com/60166794/110238257-afef0100-7f66-11eb-8596-280d75429033.png) <br/>
+What are the 2 variables of "delay_template_5x5"? <br/>
+![image](https://user-images.githubusercontent.com/60166794/110238298-ecbaf800-7f66-11eb-935d-5c3b217fcf70.png) <br/>
+The delay table below line number 2943 is for which cell ? <br/>
+![image](https://user-images.githubusercontent.com/60166794/110238338-22f87780-7f67-11eb-954b-68a6fbcde2bd.png)  <br/>
+Which delay template is used for INVX1?  <br/>
+
+
+
+
+
+
+
