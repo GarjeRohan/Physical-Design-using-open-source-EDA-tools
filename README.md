@@ -179,20 +179,20 @@ The delay table below line number 2943 is for which cell ? <br/>
 Which delay template is used for INVX1?  <br/>
 delay_template_5x5 <br/>
 
+![image](https://user-images.githubusercontent.com/60166794/110358225-2c1a3f00-8062-11eb-9f2a-7560d9bcfd62.png)
+![image](https://user-images.githubusercontent.com/60166794/110358251-35a3a700-8062-11eb-8f47-4da236b006ed.png)
+![image](https://user-images.githubusercontent.com/60166794/110358289-3d634b80-8062-11eb-98ad-14d4d80c75b9.png)
 
 
-Go to labs <br/>
 
-Type below command <br/>
-cd <br/>
-cd vsdflow/my_picorv32 <br/>
-leafpad picorv32.sdc <br/>
-Type below lines in the file picorv32.sdc file which you have just opened above <br/>
+<!---
+your comment goes here
+and here
+-->
 
 create_clock -name clk -period 2.5 -waveform {0 1.25} [get_ports clk] <br/>
 Save and close the above file <br/>
 
-Now type below command <br/>
 
 leafpad prelayout_sta.conf <br/>
 Type below lines in prelayout_sta.conf file which you have just opened above <br/>
@@ -237,13 +237,15 @@ Perform all steps in D4SK2 - MCQ11 <br/>
 You are now at below "sta" terminal <br/>
 
 % <br/>
-Type below command in above terminal <br/>
+Type below command in terminal <br/>
 
 set_propagated_clock [all_clocks] <br/>
 report_checks <br/>
+<!---
 What is the SLACK value after clock propagation ? <br/>
 
 around -0.68ns <br/>
+
 Perform all steps in D4SK4 - MCQ2 <br/>
 
 What is launch clock network delay? <br/>
@@ -259,7 +261,7 @@ Hint - Look in the same report for the line "clock clk (rise edge)" <br/>
 
 around 0.56ns <br/>
 
-
+-->
 
 # Day 5 - Final steps for RTL2GDS
 ## Routing, DRC and interactive PNR tutorial
@@ -275,13 +277,31 @@ qflow route picorv32
 qflow sta picorv32 ...
 qflow backanno picorv32
 leafpad log/sta.log
+<!---
+your comment goes here
+and here
+
+
 What is the pre-layout frequency?
 the pre-layout frequency is
-
+-->
 then open the below file
 
 log/post_sta.log
+<!---
+your comment goes here
+and here
+
+
 What is post-layout frequency?
 the post-layout to pre-layout drop in frequency is 20MHz
 the reason for post-layout to pre-layout drop in frequency is parasitics.
+-->
+
+# Qrouter : Routing In-Progress
+![image](https://user-images.githubusercontent.com/60166794/110356931-c1b4cf00-8060-11eb-9026-548861d1248f.png)
+
+# Qrouter : Routing Complete
+![image](https://user-images.githubusercontent.com/60166794/110356855-ac3fa500-8060-11eb-83a8-a69f1f23e26f.png)
+
 
