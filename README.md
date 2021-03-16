@@ -2,7 +2,6 @@
 
 #### Description ####
 #### This repository is to give brief idea about the VSD's 'Beginner Soc/Physical Design using open source EDA tools' Workshop. The workshop gives me a hands on experience with the open source tools like yosys,magic,opentimer,qrouter that are used in Physical Design. ####
--------------------------------------------------------------------
 # Table of contents #
 Day 1 - Study and review various components of RISC-V based picoSoC  <br/>
 Day 2 - Chip Planning Strategies and Introduction to Foundry Library Cells  <br/>
@@ -51,7 +50,8 @@ Technology = osu018 <br/>
 Verilog source file : picorv32.v <br/>
 Verilog module : picorv32 <br/>
 Click on Set Stop <br/>
-![image](https://user-images.githubusercontent.com/60166794/110214877-b892f900-7ecc-11eb-9e58-c1297284206d.png) <br/>
+![image](https://user-images.githubusercontent.com/60166794/111359492-9316a400-86b1-11eb-9513-946eaff53084.png)  <br/>
+
 # Day 2 - Chip planning strategies and introduction to foundry library cells <br/>
 ## Floorplanning considerations and process development kits (PDK's) <br/>
 * #### Chip Floor planning considerations 
