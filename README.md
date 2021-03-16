@@ -3,7 +3,7 @@
 #### Description ####
 #### This repository is to give brief idea about the VSD's 'Beginner Soc/Physical Design using open source EDA tools' Workshop. The workshop helped me to get a hands on experience with the open source tools like yosys,magic,opentimer,qrouter that are used in Physical Design. ####
 # Table of contents #
-[Day 1 - Study and review various components of RISC-V based picoSoC](#Day 1 - Study and review various components of RISC-V based picoSoC) <br/>
+Day 1 - Study and review various components of RISC-V based picoSoC <br/>
 Day 2 - Chip Planning Strategies and Introduction to Foundry Library Cells  <br/>
 Day 3 - Design and Characterize one Library Cell using magic Layout Tool and ngspice  <br/>
 Day 4 - Pre-Layout Timing Analysis and Importance of Good Clock Tree  <br/>
