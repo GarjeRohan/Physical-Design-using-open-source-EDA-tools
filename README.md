@@ -77,6 +77,10 @@ The area of chip in microns is 812062.19  <br/>
 * #### Labs for Magic and post-layout ngspice simulations
 * #### Inception of Layout – CMOS fabrication process
 
+![image](https://user-images.githubusercontent.com/60166794/111373036-74b8a480-86c1-11eb-833f-2ed92e6c6087.png) <br/>
+
+![image](https://user-images.githubusercontent.com/60166794/111373013-69fe0f80-86c1-11eb-8347-c448302494bf.png) <br/>
+
 ### Lab:
 #### Type below commands :
 cd <br/>
@@ -144,38 +148,36 @@ magic -T min2.tech fn_postlayout.mag & <br/>
 * #### Clock tree synthesis and signal integrity
 * #### Timing analysis with real clocks
 
+![image](https://user-images.githubusercontent.com/60166794/111373174-99148100-86c1-11eb-9a36-8e430d50b0bd.png)  <br/>
+![image](https://user-images.githubusercontent.com/60166794/111373193-a03b8f00-86c1-11eb-9e2c-b3634980918a.png)  <br/>
+
 ### Lab:
-Open terminal and Type below commands  <br/>
-cd <br/>
-git clone https://github.com/kunalg123/ngspice_labs <br/>
 cd ngspice_labs <br/>
 cat inv_tran.spice <br/>
-![image](https://user-images.githubusercontent.com/60166794/110237324-79fb4e00-7f61-11eb-87de-72aab1d8e32e.png) <br/>
+
+![image](https://user-images.githubusercontent.com/60166794/111374388-0ffe4980-86c3-11eb-8df9-4c67d7f9f782.png) <br/>
+
 The input rise slew and fall slew is 10ps. <br/>
 Type below command: <br/>
 ngspice inv_tran.spice <br/>
 
-![image](https://user-images.githubusercontent.com/60166794/110237753-a87a2880-7f63-11eb-8068-98b158724155.png)
-Go to labs Modify to output load to 20fF in inv_tran.spice Run ngspice  <br/>
-![image](https://user-images.githubusercontent.com/60166794/110237871-64d3ee80-7f64-11eb-8b55-cc1e8b219dd2.png)  <br/>
+![image](https://user-images.githubusercontent.com/60166794/111374026-a3834a80-86c2-11eb-910b-2cd86e0da98c.png)  <br/>
+Modify to output load to 20fF in inv_tran.spice Run ngspice  <br/>
+![image](https://user-images.githubusercontent.com/60166794/111374595-4dfb6d80-86c3-11eb-8d94-a8cdd0f9d2a4.png)  <br/>
 
-Go to labs Open below file using "leafpad" or "less" or "vim" - whichever you are comfortable with) <br/>
-
+Open the below file  <br/>
 /usr/local/share/qflow/tech/osu018/osu018_stdcells.lib <br/>
-Look between line numbers 21 to 24 What is the value of "slew_upper_threshold_pct_fall" ? <br/>
+The value of "slew_upper_threshold_pct_rise" is 80 <br/>
+![image](https://user-images.githubusercontent.com/60166794/111375011-c9f5b580-86c3-11eb-9175-7fd0c2b9c626.png) <br/>
 
-![image](https://user-images.githubusercontent.com/60166794/110238210-51298780-7f66-11eb-8b72-e52b887326e6.png) <br/>
-Go to labs Open the below file using leafpad or vim or less - whichever you are comfortable with <br/>
 
-/usr/local/share/qflow/tech/osu018/osu018_stdcells.lib <br/>
-Look for lines between 25 to 28 <br/>
+The value of output_threshold_pct_rise is 50 c
+![image](https://user-images.githubusercontent.com/60166794/111375472-49838480-86c4-11eb-87dd-2c452ade6ac3.png)  <br/>
 
-What is the value of output_threshold_pct_rise ? <br/>
-![image](https://user-images.githubusercontent.com/60166794/110238257-afef0100-7f66-11eb-8596-280d75429033.png) <br/>
-What are the 2 variables of "delay_template_5x5"? <br/>
-![image](https://user-images.githubusercontent.com/60166794/110238298-ecbaf800-7f66-11eb-935d-5c3b217fcf70.png) <br/>
-The delay table below line number 2943 is for which cell ? <br/>
-![image](https://user-images.githubusercontent.com/60166794/110238338-22f87780-7f67-11eb-954b-68a6fbcde2bd.png)  <br/>
+![image](https://user-images.githubusercontent.com/60166794/111375594-72a41500-86c4-11eb-94d3-dda665621e5d.png) <br/>
+
+![image](https://user-images.githubusercontent.com/60166794/111375755-a67f3a80-86c4-11eb-9f6d-cfa62e1137d3.png)  <br/>
+
 Which delay template is used for INVX1?  <br/>
 delay_template_5x5 <br/>
 
@@ -186,79 +188,49 @@ delay_template_5x5 <br/>
 
 
 <!---
-your comment goes here
-and here
--->
-
+your comment gojes here
+and her
 create_clock -name clk -period 2.5 -waveform {0 1.25} [get_ports clk] <br/>
 Save and close the above file <br/>
-
-
 leafpad prelayout_sta.conf <br/>
 Type below lines in prelayout_sta.conf file which you have just opened above <br/>
-
 read_liberty /usr/local/share/qflow/tech/osu018/osu018_stdcells.lib <br/>
 read_verilog synthesis/picorv32.rtlnopwr.v <br/>
 link_design picorv32 <br/>
 read_sdc picorv32.sdc <br/>
 report_checks <br/>
 Save and close the above file <br/>
-
 Now type below command <br/>
-
 sta prelayout_sta.conf <br/>
 What is the SLACK value you see? <br/>
 around -0.56ns <br/>
-
-
-
 Repeat all steps in D4SK2 - MCQ11 <br/>
-
 NOTE - If you have already done that, then you will see below 'sta' terminal like below <br/>
-
 % <br/>
 Type below command <br/>
-
 report_checks -digits 4 <br/>
 What is the data arrival time? <br/>
-
 around 2.9001ns <br/>
-
 Repeat all steps in D4SK2 - MCQ12 <br/>
-
 What is data required time ? <br/>
 around 2.3389ns <br/>
-
-
-
-
 Perform all steps in D4SK2 - MCQ11 <br/>
-
 You are now at below "sta" terminal <br/>
-
 % <br/>
 Type below command in terminal <br/>
-
 set_propagated_clock [all_clocks] <br/>
 report_checks <br/>
+--> 
 <!---
 What is the SLACK value after clock propagation ? <br/>
-
 around -0.68ns <br/>
-
 Perform all steps in D4SK4 - MCQ2 <br/>
-
 What is launch clock network delay? <br/>
-
 Hint - Scroll a little up at the beginning of report after "report_checks" command. There is line after "clock clk (rise edge)" <br/>
-
 0.58ns <br/>
 1.Perform all steps in D4SK4 - MCQ3 <br/>
-
 What is the capture clock network delay? <br/>
-
 Hint - Look in the same report for the line "clock clk (rise edge)" <br/>
-
 around 0.56ns <br/>
 
 -->
