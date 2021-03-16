@@ -114,6 +114,8 @@ ngspice 1 -> run <br/>
 ngspice 1 -> setplot tran1 <br/>
 ngspice 1 -> plot out in <br/>
 ![image](https://user-images.githubusercontent.com/60166794/111369835-813afe00-86bd-11eb-9817-92eef6113e95.png) <br/>
+![image](https://user-images.githubusercontent.com/60166794/111371640-b5172300-86bf-11eb-8c0d-fdf7f4d1097f.png)  <br/>
+![image](https://user-images.githubusercontent.com/60166794/111371716-cc561080-86bf-11eb-9abe-651351c5d4be.png)  <br/>
 
 
 #### Type below commands 
