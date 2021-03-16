@@ -38,13 +38,8 @@ The output area in microns is 15420.24 <br/>
 ![image](https://user-images.githubusercontent.com/60166794/111358705-a70dd600-86b0-11eb-80bc-0c710a462aec.png) <br/>
 
 ### Type below command: <br/>
-cd <br/>
-cd vsdflow <br/>
-mkdir my_picorv32 <br/>
-cd my_picorv32 <br/>
-mkdir source synthesis layout <br/> 
-cp ~/vsdflow/verilog/picorv32.v source/. <br/>
-qflow gui & <br/>
+
+cd vsdflow is a command change the directory to vsdflow, mkdir is a command create the folder, cd my_picorv32 is a command to change the directory to my_picorv32, mkdir source synthesis layout is a command to create folders source, synthesis and layout, cp ~/vsdflow/Verilog/picorv32.v/source/. - copy the Verilog file i.e picorv32 from source to vsdflow, qflow gui &- it open qflow manager in a graphical user interface.
 ### Select below options in gui: <br/>
 Technology = osu018 <br/>
 Verilog source file : picorv32.v <br/>
@@ -58,21 +53,24 @@ Click on Set Stop <br/>
 * #### Library Binding and Placement 
 * #### Cell design and characterization flows 
 * #### General timing characterization parameters
+![image](https://user-images.githubusercontent.com/60166794/111362518-e50cf900-86b4-11eb-8fae-7a5985fd8d25.png)  <br/>
+![image](https://user-images.githubusercontent.com/60166794/111362718-26050d80-86b5-11eb-866d-1f499469a393.png)  <br/>
+The die is imprinted multiple times on wafer to increase its throughput.  <br/>
+
+
+
+![image](https://user-images.githubusercontent.com/60166794/111362192-834c8f00-86b4-11eb-9057-73e3267362d0.png)  <br/>
 ### Lab:
-#### Type below command : 
-cd <br/>
-cd vsdflow/my_picorv32 <br/>
-qflow display picorv32 & <br/>
-This will open layout and tkcon window In the layout window, select whole chip using below steps <br/>
-Take cursor to bottom left <br/>
-Left mouse click <br/>
-Take cursor to top right <br/>
-Right mouse click <br/>
-Press Shift+i <br/>
-This will select the whole layout Now in tkcon window, type below command <br/>
-box <br/>
+![image](https://user-images.githubusercontent.com/60166794/111363969-b09a3c80-86b6-11eb-8f7e-88a4ffddc51f.png)  <br/>
+![image](https://user-images.githubusercontent.com/60166794/111364236-fd7e1300-86b6-11eb-8ef5-143e694c11f1.png)  <br/>
+![image](https://user-images.githubusercontent.com/60166794/111364481-47ff8f80-86b7-11eb-9551-ed7c366133b9.png)  <br/>
+![image](https://user-images.githubusercontent.com/60166794/111364552-6796b800-86b7-11eb-987c-aa3bf3fc1fc0.png)  <br/>
+![image](https://user-images.githubusercontent.com/60166794/111364664-885f0d80-86b7-11eb-8150-a399f92bb767.png) <br/>
+
+
+
 The area of chip in microns is 812062.19  <br/>
-![image](https://user-images.githubusercontent.com/60166794/110216981-a074a700-7ed7-11eb-86c4-f8586a1bb323.png) <br/>
+![image](https://user-images.githubusercontent.com/60166794/111365141-218e2400-86b8-11eb-9093-950dc62dc765.png)  <br/>
 
 # Day 3
 * #### Labs for CMOS inverter ngspice simulations
