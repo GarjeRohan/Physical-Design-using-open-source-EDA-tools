@@ -19,22 +19,16 @@ Day 5 - Final Steps for RTL2GDS  <br/>
 
 ### Lab:
 Type the command "yosys" in terminal: <br/>
-![image](https://user-images.githubusercontent.com/60166794/110215078-d90f8300-7ecd-11eb-8ef1-4f9af2535176.png) <br/>
-After typing "which sta", the sta tool is linked to following path: <br/>
-/usr/bin/sta <br/>
-![image](https://user-images.githubusercontent.com/60166794/110215232-8d110e00-7ece-11eb-8cf2-b041c8d1d724.png)  <br/>
+![image](https://user-images.githubusercontent.com/60166794/111354385-467c9a00-86ac-11eb-9191-ff94a05013fc.png)  <br/>
 
-Type below command from current working directory <br/>
-git clone https://github.com/kunalg123/vsdflow.git <br/>
-cd vsdflow <br/>
-./vsdflow spi_slave_design_details.csv <br/>
-ls -ltr outdir_spi_slave/ <br/>
-Here you will see lot of files created. <br/>
-Now type below command <br/>
-ls -ltr outdir_spi_slave | wc <br/>
-This will give you 3 numbers in one row, where 1st number represents number of files. <br/> 
-The total numbers of file we can see is: 16 <br/>
-![image](https://user-images.githubusercontent.com/60166794/110219637-7d052880-7ee6-11eb-9a3e-1dd0e1e10e92.png)
+This specifies the command 'which sta' when typed in terminal it shows the location of sta ie.,where it is present that is in the usr folder to bin sub folder and there sta is present <br/>
+![image](https://user-images.githubusercontent.com/60166794/111355604-885a1000-86ad-11eb-8a55-8522a0d15d17.png) <br/>
+
+A git clone command is used to target this existing repository.
+![image](https://user-images.githubusercontent.com/60166794/111356513-7331b100-86ae-11eb-9771-b0a391f2fe3a.png)
+
+In image below the .ls -ltr outdir_spi_slave | wc command will show the total 17 number of lines beacuse 1st line will give total number and the rest 16 are the number of flies. <br/>
+![image](https://user-images.githubusercontent.com/60166794/111357284-30bca400-86af-11eb-8f56-083335e73be6.png)
 
 ### Type below command: <br/>
 cd outdir_spi_slave <br/>
@@ -42,7 +36,8 @@ qflow display spi_slave <br/>
 It will open 2 windows "layout1" and "tkcon" <br/>
 On "tkcon" window, type "box". <br/>
 The output area in microns is 15420.24 <br/>
-![image](https://user-images.githubusercontent.com/60166794/110215574-86839600-7ed0-11eb-8a37-ebb60888a943.png)  <br/>
+![image](https://user-images.githubusercontent.com/60166794/111358705-a70dd600-86b0-11eb-80bc-0c710a462aec.png) <br/>
+
 ### Type below command: <br/>
 cd <br/>
 cd vsdflow <br/>
