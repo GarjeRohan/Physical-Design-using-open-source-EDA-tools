@@ -83,24 +83,20 @@ cd <br/>
 git clone https://github.com/kunalg123/ngspice_labs.git <br/>
 cd ngspice_labs <br/>
 cat inv.spice <br/>
-![image](https://user-images.githubusercontent.com/60166794/110218111-ce5cea00-7edd-11eb-88d0-9d12e3c14569.png) <br/>
+![image](https://user-images.githubusercontent.com/60166794/111368316-bc3c3200-86bb-11eb-8b34-70b6c12c85b0.png) <br/>
+
 The width of NMOS and PMOS transistor is 0.375u. <br/>
 
 ##### Type below commands
-
-cd <br/>
 cd ngspice_labs <br/>
 ngspice inv.spice <br/>
-There will be terminal like below <br/>
-ngspice 1 -> <br/>
 On the above ngspice terminal, type below commands <br/>
 run <br/>
 setplot dc1 <br/>
 plot out in <br/>
 This will open a plot with CMOS VTC and Blue 45 degree line <br/>
 Click on the intersection of Blue line and CMOS VTC. <br/>
-Go to terminal <br/>
-![image](https://user-images.githubusercontent.com/60166794/110220312-c8213a80-7eea-11eb-948a-a63287c81337.png)
+![image](https://user-images.githubusercontent.com/60166794/111368541-08877200-86bc-11eb-8704-88087cac8550.png) <br/>
 
 The intersection point is called as swithching threshold. <br/>
 
@@ -108,13 +104,16 @@ The intersection point is called as swithching threshold. <br/>
 Open file called "inv_tran.spice" using below command: <br/>
 leafpad inv_tran.spice <br/>
 Change PMOS width to 0.75u, Save and Close <br/>
-![image](https://user-images.githubusercontent.com/60166794/110218296-f567eb80-7ede-11eb-9ffe-16a9f805ffc7.png)<br/>
-Type below commands for transient simulations <br/>
+![image](https://user-images.githubusercontent.com/60166794/111368863-5ef4b080-86bc-11eb-9268-d4b7abed4a52.png)  <br/>
+![image](https://user-images.githubusercontent.com/60166794/111369617-46d16100-86bd-11eb-988d-3c5eb774c079.png) <br/>
+
+
+Transient simulations can be performed using below commands <br/>
 ngspice inv_tran.spice <br/>
 ngspice 1 -> run <br/>
 ngspice 1 -> setplot tran1 <br/>
 ngspice 1 -> plot out in <br/>
-![image](https://user-images.githubusercontent.com/60166794/110218472-f5b4b680-7edf-11eb-8fa0-c8a9e67bbf2f.png) <br/>
+![image](https://user-images.githubusercontent.com/60166794/111369835-813afe00-86bd-11eb-9817-92eef6113e95.png) <br/>
 
 
 #### Type below commands 
@@ -125,14 +124,15 @@ This will open magic layout window and tkcon window  <br/>
 Go to tkcon window and type below command <br/>
 source draw_fn.tcl <br/>
 
-![image](https://user-images.githubusercontent.com/60166794/110218739-555f9180-7ee1-11eb-886a-48f9412109c6.png) <br/>
-![image](https://user-images.githubusercontent.com/60166794/110218772-8213a900-7ee1-11eb-9ce0-aa1de11da71d.png) <br/>
+![image](https://user-images.githubusercontent.com/60166794/111370162-e4c52b80-86bd-11eb-842d-31a29ca66318.png)  <br/>
+
+![image](https://user-images.githubusercontent.com/60166794/111370249-01f9fa00-86be-11eb-96be-981249a6d251.png) <br/>
 
 #### Type below command 
 cd <br/>
 cd ngspice_labs <br/>
 magic -T min2.tech fn_postlayout.mag & <br/>
-![image](https://user-images.githubusercontent.com/60166794/110218825-c3a45400-7ee1-11eb-8081-fb28e7afddc8.png) <br/>
+![image](https://user-images.githubusercontent.com/60166794/111370312-15a56080-86be-11eb-968e-359489625d77.png)  <br/>
 
 
 # Day 4 - Pre-layout timing analysis and importance of good clock tree
