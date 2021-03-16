@@ -64,7 +64,6 @@ The die is imprinted multiple times on wafer to increase its throughput.  <br/>
 ![image](https://user-images.githubusercontent.com/60166794/111363969-b09a3c80-86b6-11eb-8f7e-88a4ffddc51f.png)  <br/>
 ![image](https://user-images.githubusercontent.com/60166794/111364236-fd7e1300-86b6-11eb-8ef5-143e694c11f1.png)  <br/>
 ![image](https://user-images.githubusercontent.com/60166794/111364481-47ff8f80-86b7-11eb-9551-ed7c366133b9.png)  <br/>
-![image](https://user-images.githubusercontent.com/60166794/111364552-6796b800-86b7-11eb-987c-aa3bf3fc1fc0.png)  <br/>
 ![image](https://user-images.githubusercontent.com/60166794/111364664-885f0d80-86b7-11eb-8150-a399f92bb767.png) <br/>
 
 
